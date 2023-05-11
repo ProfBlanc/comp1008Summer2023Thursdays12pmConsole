@@ -1,0 +1,71 @@
+C# vs Java
+
+filenames
+cs: .cs
+java: .java
+
+organization
+namespace
+cs: using example using System;
+java: import example import className;
+
+access levels
+cs: public, private, protected
+java: same + default aka package-private
+
+naming conventions
+cs:
+    variables: camelCase
+    methods, classes: PascalCase aka UpperCamelCase
+java:
+    variables: same - camelCase
+    methods: camelCase
+    classes: PascalCase
+
+data types
+    primitive data types
+        cs
+            bool
+            byte
+            char
+            sbyte
+            short
+            ushort
+            int
+            long
+            ulong
+            float
+            double
+            decimal
+            string
+    java
+                    boolean
+                    byte
+                    char
+                    short
+                    int
+                    long
+                    float
+                    double
+
+Biggest thing is
+    in Java: string is String. String is reference data type
+
+Output
+    cs
+        Console.WriteLn()
+        Console.Write()
+        formatting: Console.WriteLine($"My name is {} Blanc",
+        "Ben");
+    java
+        System.out.println();
+        System.out.print();
+        formatting: System.out.printf("");
+
+Input
+    cs
+        Console.ReadLine();
+    java
+        create an object => Scanner
+        Scanner scanner = new Scanner(System.in);
+        scanner.method();
