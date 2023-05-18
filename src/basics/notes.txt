@@ -69,3 +69,13 @@ Input
         create an object => Scanner
         Scanner scanner = new Scanner(System.in);
         scanner.method();
+
+
+Public
+    access from anywhere
+        any package, any class
+Private
+    only accessible inside that class
+Protected
+    only accessible inside class and child classes
+    for Java, protected is also accessible inside of package
