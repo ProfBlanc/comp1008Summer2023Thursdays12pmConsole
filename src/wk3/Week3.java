@@ -95,11 +95,47 @@ public class Week3 {
         String[] dow2 = new String[7];
         dow2[0] = "Mon";
         dow2[1] = "Tues";
-        String[] whatToWearOptions = {"winter coat", "long-sleeve",
-                "tee-shirt", "light coat"};
+        String[] whatToWearOptions = {"winter coat", "light coat",
+                "long-sleeve","tee-shirt"};
         double[] temperatureResponses; //tempeartureResponses = new double[howMany]
         double averageTemperature = 0d;
+        double tempeatureSum = 0d;
         String[] decisionOfWhatToWear;
+
+        System.out.println("Welcome to our program");
+        System.out.println("Enter number of days that you want to enter");
+        howManyDaysYouWantToEnter = input.nextInt();
+        if(howManyDaysYouWantToEnter < 1 || howManyDaysYouWantToEnter > 7){
+            System.out.println("Error! Days should be between 1 and 7");
+            System.out.println("Goodbye!");
+        }
+        else{
+            temperatureResponses = new double[howManyDaysYouWantToEnter];
+            decisionOfWhatToWear = new String[howManyDaysYouWantToEnter];
+
+            for(int i = 0 ; i < howManyDaysYouWantToEnter; i++ ){
+
+                System.out.printf("Enter the temperature for %s %n",
+                        dow1[i]);
+
+                double temp = input.nextDouble();
+                temperatureResponses[i] = temp;
+
+                tempeatureSum += temp;
+
+                if(temp < 0)
+                    decisionOfWhatToWear[i] = whatToWearOptions[0];
+                else if (temp < 11)
+                    decisionOfWhatToWear[i] = whatToWearOptions[1];
+                else if(temp < 21)
+                    decisionOfWhatToWear[i] = whatToWearOptions[2];
+                else
+                    decisionOfWhatToWear[i] = whatToWearOptions[3];
+            }
+
+            }
+
+        }
 
 
     }
