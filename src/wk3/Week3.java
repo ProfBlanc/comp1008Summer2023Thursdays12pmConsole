@@ -1,5 +1,7 @@
 package wk3;
 
+import java.util.Scanner;
+
 public class Week3 {
 
     public static void main(String[] args) {
@@ -77,6 +79,28 @@ public class Week3 {
 
 
          */
+
+/*
+        Scanner: input
+        howManyDaysYouWantToEnter: int
+        daysOfWeek: array of Strings
+        whatToWearOptions: array of Strings
+        temperatureResponses: array of int/double
+        averageTemperature: double
+        decisionOfWhatToWhere: array of Strings based on temperature and if statements
+         */
+        Scanner input = new Scanner(System.in);
+        int howManyDaysYouWantToEnter = 0;
+        String[] dow1 = {"Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur", "Sun"};
+        String[] dow2 = new String[7];
+        dow2[0] = "Mon";
+        dow2[1] = "Tues";
+        String[] whatToWearOptions = {"winter coat", "long-sleeve",
+                "tee-shirt", "light coat"};
+        double[] temperatureResponses; //tempeartureResponses = new double[howMany]
+        double averageTemperature = 0d;
+        String[] decisionOfWhatToWear;
+
 
     }
 
