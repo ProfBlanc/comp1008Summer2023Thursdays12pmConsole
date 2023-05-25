@@ -36,11 +36,44 @@ public class Week3 {
                         21
                     Enter temp for Wednesday
                         -2
-                  
+
                    The average temperature is 9 degrees Celsius
                    On Monday, you should wear a light coat
                    On Tuesday, you should wear a t-shirt
                    On Wednesday, you should wear a winter coat
+
+
+         */
+
+    }
+
+    static void example1(){
+
+        //variables?
+        /*
+        Scanner: input
+        howManyDaysYouWantToEnter: int
+        daysOfWeek: array of Strings
+        whatToWearOptions: array of Strings
+        temperatureResponses: array of int/double
+        averageTemperature: double
+        decisionOfWhatToWhere: array of Strings based on temperature and if statements
+         */
+
+        /*
+            Steps:
+                1-declare variables
+                2-ask user for # days
+                3-validate response b/t 1-7
+                NO: output error message
+                YES:
+                -for loop starting at 0, ending # of days(2) (exclusive)
+                    -ask user for temp of that day
+                    -store temp for that day
+                -generate decisionOfWhatToWhere by iterating thru array of temps
+                -iterature temps and generate avg temp
+                -iterature any array
+                    temp to DAY OF WEEK was TEMP, therefore you should wear WHAT TO WEAR
 
 
          */
