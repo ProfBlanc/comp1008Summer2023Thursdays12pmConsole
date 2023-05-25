@@ -1,10 +1,93 @@
 package wk3;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Week3 {
 
     public static void main(String[] args) {
+        example3();
+    }
+
+    static void example3(){
+
+        //typecasting: changing from one data type to another
+        // size: data type size
+
+        int num1 = -250;
+        float num2 = num1;
+        short num3 = (short)num1;
+        byte num4 = (byte)num1; // value ranges for byte? -128   0     127
+        System.out.println(num4);
+
+        float f1 = 100;
+        double d1 = f1;
+
+        /*
+            implicity typecasting
+                from small data type to big data type
+                    promotion
+                    short => int
+                    int => long
+                    float => double
+                explicit typecasting
+                    big to small
+                       demotion
+                            (taget data type)
+
+         */
+
+    }
+
+    static void example5(){
+
+        Calc c = new Calc();
+
+        double result1 = c.add((byte)1, (byte)2);
+
+        //short, float
+        double result2 = c.add((short)10, 20);
+
+        //double, double
+        double result3 = c.add(10F, 20L);
+
+        int randomNumber = new Random().nextInt(5); // value 0-4
+        Random random = new Random();
+
+        random.nextInt(1, 10);
+    }
+    static void example2(){
+
+        /*
+                multi-dimensional arrays
+                    tabular
+                        rows and columns
+
+                    Example
+
+                        Row1Col1    Row1Col2    Row1Col3
+                        Row2Col1    Row2Col2    Row2Col3
+                        Row3Col1    Row3Col2    Row3Col3
+
+         */
+        String[][] data1 = new String[3][3];
+        data1[0][0] = "Row1Col1";
+        data1[0][1] = "Row1Col2";
+        data1[0][2] = "Row1Col3";
+
+        System.out.println(data1[0][0]);
+        System.out.println(data1[0][1]);
+        System.out.println(data1[0][2]);
+
+        for(int row = 1; row < data1.length; row++){
+            for(int col = 0; col < data1[row].length; col++){
+                data1[row][col] = String.format("Row%dCol%d", row + 1, col + 1 );
+            }
+        }
+        System.out.println("Done");
+
+    }
+
 
         /*
             Ask the user how many tempeartures they want to enter
@@ -47,7 +130,6 @@ public class Week3 {
 
          */
 
-    }
 
     static void example1(){
 
@@ -113,10 +195,12 @@ public class Week3 {
             temperatureResponses = new double[howManyDaysYouWantToEnter];
             decisionOfWhatToWear = new String[howManyDaysYouWantToEnter];
 
+
+
             for(int i = 0 ; i < howManyDaysYouWantToEnter; i++ ){
 
                 System.out.printf("Enter the temperature for %s %n",
-                        dow1[i]);
+                        dow1[i] + "day");
 
                 double temp = input.nextDouble();
                 temperatureResponses[i] = temp;
@@ -132,6 +216,15 @@ public class Week3 {
                 else
                     decisionOfWhatToWear[i] = whatToWearOptions[3];
             }
+
+            // for loop: display information
+            for(int i = 0 ; i < howManyDaysYouWantToEnter; i++){
+
+                System.out.printf("On %s, it will be %.1f degrees Celsius. " +
+                        "You should wear a %s %n", dow1[i] + "day",
+                        temperatureResponses[i], decisionOfWhatToWear[i]);
+            }
+            System.out.println("The average temperature will be " + (tempeatureSum / howManyDaysYouWantToEnter));
 
             }
 
