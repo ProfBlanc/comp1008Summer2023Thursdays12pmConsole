@@ -1,7 +1,25 @@
 package wk4;
 
+//java documentation
+
+/*
+multiline comment
+
+In documentation
+@spcial_meaning
+
+ */
+
+/**
+ * This is our offical documentation for this awesome Student class
+ * @author Ben Blanc
+ * @since 2023-06-08
+ * @version 1.0
+ */
+
 public class Student {
 
+    /** First and Last name of Student. At least 3 chars */
     private String name = "Student";
     private int age = 20;
     private double grade = 50;
@@ -47,6 +65,10 @@ public class Student {
 
     //alt+insert => Getter and Setter
 
+    /**
+     * The getter / accessor for the name instance variable
+     * @return the name instance variable. Must be at least 3 characters
+     */
     public String getName() {
         return name;
     }
@@ -95,6 +117,15 @@ public class Student {
 
         return new Student("Smarty Pants", 20, 80);
     }
+
+    /**
+     *  Create an honor roll student object with given name and grade. Grade must be at least 80
+     * @param name String variable representing name of Student. At least 3 chars
+     * @param grade double value of grade betweeen 20 and 100
+     * @return a new Student object with specified name and grade.
+     */
+
+
 
     public static Student honorRollStudent(String name, double grade){
 
