@@ -146,4 +146,7 @@ public class Student {
     public static Student matureStudent(){
         return new Student("", 30);
     }
+    public static Student matureStudent(String name, int age){
+        return new Student(name, age >= 30 ? age : 30 );
+    }
 }

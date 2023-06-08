@@ -22,7 +22,7 @@ public class StudentTest {
     @Before
     public void beforeEachTest(){
         System.out.println("Running Test # " + (++NUM_TESTS));
-        if(NUM_TESTS < 4)
+        if(NUM_TESTS < 3)
             student = new Student();
     }
     @After
@@ -60,7 +60,6 @@ public class StudentTest {
     @ParameterizedTest
     @ValueSource(strings = {"Ben", "Blanc", "Joe", "Mary"})  // arrays of primitive datatypes + strings + objects
     public void testDefaultConstructorSetNameValidValues(String name){
-
         student.setName(name);
         assertEquals(name, student.getName());
 
@@ -70,9 +69,19 @@ public class StudentTest {
     @CsvSource({"Ben,20","Blanc, 25","Mary, 19"})
     public void testTwoArgConstructor(String name, int age){
 
+       // assertNull(student);
         student = new Student(name, age);
         assertEquals(name, student.getName());
         assertEquals(age, student.getAge());
+    }
+
+    @ParameterizedTest
+    @CsvSource({"Ben,30", "Blanc,40"})
+    public void testMatureStudentValidValues(String name, int age){
+        student = Student.matureStudent(name, age);
+        assertEquals(name, student.getName());
+        assertEquals(age, student.getAge());
+
     }
 
 }
