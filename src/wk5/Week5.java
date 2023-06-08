@@ -16,7 +16,7 @@ public class Week5 {
 
         Random random = new Random();
 
-        random.nextInt(x)
+        random.nextInt();
     }
     public static void main(String[] args) {
      example1();
