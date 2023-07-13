@@ -1,6 +1,8 @@
 package wk6;
 
-public class Dog extends Canine{
+import java.util.Random;
+
+public class Dog extends Canine implements Arms{
 
     double hairLength;
 
@@ -29,5 +31,27 @@ public class Dog extends Canine{
     public String toString(){
        // return String.format("Dog{name = '%s', weight = '%.1f', hairLength = %.1f}", getName(), getWeight(), hairLength);
         return "Dog" + super.toString().substring(6, super.toString().length() - 1) + ", hairLength = " + hairLength + "--new--}";
+    }
+
+    @Override
+    public double dig(int durationInSeconds) {
+        return durationInSeconds * new Random().nextInt(1, 25);
+    }
+
+    @Override
+    public boolean strike(String target) {
+        return target.length() % 2 == 0;
+    }
+
+    @Override
+    public int scratch(String location) {
+        return location.length()  + new Random().nextInt(20, 40);
+    }
+
+
+
+    @Override
+    public void randomMethod() {
+
     }
 }

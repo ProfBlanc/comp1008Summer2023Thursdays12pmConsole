@@ -13,6 +13,14 @@ public class Week9 {
 
 
     }
+    static void example2(){
+
+        Paws paws = new Dog();
+
+        double result = paws.dig(2);
+
+    }
+
     public static void main(String[] args) {
         example1();
     }
