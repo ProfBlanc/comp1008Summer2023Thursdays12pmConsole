@@ -1,0 +1,101 @@
+Create an interface
+	External Component of a bigger object
+		Paws
+Abstract class
+	Canine
+
+
+
+
+Barrie 		has its own laws
+		bylaws
+Ontario		has its own laws
+		provincial laws
+Canada
+		has its own laws
+		federal laws
+
+
+
+
+
+England			France
+
+	Canada
+
+
+
+
+
+
+
+
+
+PublicSpeaking: I   interface that extends Speaking
+Speaking: A, I     interface
+Teach: A
+
+
+Person: A   C
+
+
+Teacher: C, A
+Professor: C
+
+
+professor extends Teacher
+Teacher is object by itself
+
+
+
+
+
+
+PublicSpeaking
+Speaking
+Person
+Teach
+Teacher
+Professor
+
+
+
+Interface: list of requirements
+Abstract Class: inner component of other class
+Concrete Class: stands by itself
+
+
+
+
+
+
+
+
+
+You need to catch all possible errors
+Anytime you attempt to
+	- open external resource
+	- get user input
+	- convert
+
+
+java.lang		all objects in this package, automatically loaded each time java runs
+
+
+
+
+
+
+
+How many methods are called to run our example11?
+What are the method calls?
+		main
+		example11
+		total("hi", 11)
+		determineIfNumberIsInBounds
+		IndexOutOfBoundsException
+
+
+
+
+
